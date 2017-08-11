@@ -1,0 +1,5 @@
+name: Elasticsearch Cluster 5.5.1
+description: |
+  Elasticsearch, for search! 如果有相关版权或者疑问请联系datachina@live.com
+version: 5.5.1-rancher1
+category: ELK
