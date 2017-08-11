@@ -10,7 +10,7 @@ catalog:
           required: true
           label: "Cluster name"
           description: "Name of the Elasticsearch Cluster"
-          default: "es-cluster"
+          default: "aierdc-es-cluster"
 
         - variable: "UPDATE_SYSCTL"
           label: "Update host sysctl:"
