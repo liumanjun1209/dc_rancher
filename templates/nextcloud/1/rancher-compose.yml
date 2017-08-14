@@ -41,8 +41,6 @@ catalog:
         - rancher-efs
         - rancher-ebs
 
-
-
 services:
 
   nextcloud:

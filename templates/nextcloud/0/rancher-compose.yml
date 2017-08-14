@@ -30,9 +30,6 @@ catalog:
       required: true
       type: password
 
-
-
-
 services:
 
   nextcloud:
