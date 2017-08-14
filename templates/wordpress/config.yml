@@ -1,0 +1,6 @@
+name: Wordpress
+description: |
+  Blog tool, publishing platform and CMS
+  如果有相关版权或者疑问请联系datachina@live.com
+version: v0.2-bitnami
+category: Blogging
