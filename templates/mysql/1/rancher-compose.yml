@@ -1,6 +1,6 @@
 .catalog:
   name: "mysql"
-  version: "v0.0.1"
+  version: "v0.0.2"
   description: "A recommended stack for the MySQL RDBMS."
   uuid: mysql-0
   minimum_rancher_version: v1.0.0
