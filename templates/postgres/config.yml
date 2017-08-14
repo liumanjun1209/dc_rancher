@@ -1,5 +1,7 @@
 name: PostgreSQL
 description: |
-  PostgreSQL — an object-relational database (ORDBMS) 如果有相关版权或者疑问请联系datachina@live.com
-version: v0.0.1
+  PostgreSQL — an object-relational database (ORDBMS)
+   如果有相关版权或者疑问请联系datachina@live.com
+   v0.0.2增加postgress数据库可以选择存储nfs，默认数据库名：postgres
+version: v0.0.2
 category: Database
