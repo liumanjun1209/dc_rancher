@@ -1,0 +1,9 @@
+name: Rancher RBD
+description: |
+  Docker volume plugin for Ceph RBD
+    如果有相关版权或者疑问请联系datachina@live.com
+version: 0.1.0
+category: Storage
+labels:
+  io.rancher.certified: Experimental
+  io.rancher.orchestration.supported: 'cattle'
