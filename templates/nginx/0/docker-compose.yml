@@ -1,0 +1,17 @@
+version: '1'
+services:
+  nginx:
+        image: 'nginx'
+      volumes:
+        - 'nginx_logs:/var/log/nginx'
+        - 'nginx_www:/usr/share/nginx/html/www'
+        - 'nginx_config:/etc/nginx'
+     ports:
+      - ${public_port}:${public_port}
+volumes:
+  nginx_logs:
+    driver: ${volume_driver_nginx_logs}
+  nginx_www:
+    driver: ${volume_driver_nginx_www}
+  nginx_config:
+    driver: ${volume_driver_nginx_config}

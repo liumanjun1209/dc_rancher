@@ -1,0 +1,58 @@
+version: '1'
+catalog:
+  name: "nginx"
+  version: "v0.1"
+  description: "nginx"
+  uuid: Nginx-1
+  minimum_rancher_version: v0.51.0
+  questions:    
+    - variable: public_port
+      description: "public port to access the nginx"
+      label: "Public Port"
+      required: true
+      default: "80"
+      type: "int"
+    - variable: volume_driver_nginx_logs
+      description: "Volume driver to use with this service"
+      label: "volume_driver_nginx_logs"
+      required: true
+      default: "local"
+      type: enum
+      options:
+        - local
+        - rancher-nfs
+        - rancher-efs
+        - rancher-ebs
+    - variable: volume_driver_nginx_www
+      description: "Volume driver to use with this service"
+      label: "volume_driver_nginx_www"
+      required: true
+      default: "local"
+      type: enum
+      options:
+        - local
+        - rancher-nfs
+        - rancher-efs
+        - rancher-ebs
+    - variable: volume_driver_nginx_config
+      description: "Volume driver to use with this service"
+      label: "volume_driver_nginx_config"
+      required: true
+      default: "local"
+      type: enum
+      options:
+        - local
+        - rancher-nfs
+        - rancher-efs
+        - rancher-ebs
+services:
+  nginx:
+    scale: 1
+    retain_ip: true
+    health_check:
+      port: 80
+      interval: 5000
+      unhealthy_threshold: 3
+      request_line: 'GET / HTTP/1.0'
+      healthy_threshold: 2
+      response_timeout: 5000
