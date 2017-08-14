@@ -19,4 +19,6 @@ When you start Nextcloud for the first time you will see the [Installation Wizar
 
 Read more in the official [Nextcloud Documentation](https://docs.nextcloud.com/).
 
+    如果有相关版权或者疑问请联系datachina@live.com
+
 
