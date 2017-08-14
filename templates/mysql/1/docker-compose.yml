@@ -1,7 +1,7 @@
 version: '2'
 services:
   mysql-lb:
-    image: rancher/lb-service-haproxy:v0.6.4
+    image: rancher/lb-service-haproxy:v0.7.6
     ports:
       - ${mysql_lb_port}:${mysql_lb_port}
   mysql-data:
@@ -9,7 +9,7 @@ services:
     labels:
       io.rancher.container.start_once: true
     volumes:
-      - 'mysql_data_tmp:/var/lib/mysql'
+      - 'mysql_data_nfs: /var/lib/mysql'
   mysql:
     image: ${mysql_image}
     environment:
@@ -39,5 +39,5 @@ services:
     volumes_from:
       - mysql-data
 volumes:
-mysql_data_tmp:
-driver: ${volume_driver}
+  mysql_data_nfs:
+    driver: ${volume_driver}
