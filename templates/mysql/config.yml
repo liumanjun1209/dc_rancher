@@ -1,0 +1,7 @@
+name: MySQL
+description: |
+  MySQL — an open-source relational database management system (RDBMS)
+     如果有相关版权或者疑问请联系datachina@live.com
+     v0.0.2增加数据库可以选择存储nfs，默认数据库名：mysql
+version: v0.0.2
+category: Database
