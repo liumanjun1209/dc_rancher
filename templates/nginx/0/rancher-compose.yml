@@ -1,10 +1,9 @@
-version: '1'
-catalog:
+.catalog:
   name: "nginx"
-  version: "v0.1"
   description: "nginx"
-  uuid: Nginx-1
-  minimum_rancher_version: v0.51.0
+  version: "v0.0.1"
+  uuid: Nginx-0
+  minimum_rancher_version: v1.0.0
   questions:    
     - variable: public_port
       description: "public port to access the nginx"
