@@ -3,7 +3,7 @@ version: '2'
 catalog:
 
   name: nextcloud
-  version: 0.0.1
+  version: 0.0.2
   description: Nextcloud - Enterprise File Sync and Share
   questions:
     - variable: NEXTCLOUD_PORT
@@ -29,7 +29,17 @@ catalog:
       label: MySQL Pass
       required: true
       type: password
-
+    - variable: volume_driver
+      description: "Volume driver to use with this service"
+      label: "Volume driver"
+      required: true
+      default: "local"
+      type: enum
+      options:
+        - local
+        - rancher-nfs
+        - rancher-efs
+        - rancher-ebs
 
 
 
