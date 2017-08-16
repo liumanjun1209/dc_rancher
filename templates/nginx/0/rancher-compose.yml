@@ -1,4 +1,5 @@
-.catalog:
+version: '2'
+catalog:
   name: "nginx"
   description: "nginx"
   version: "v0.0.1"

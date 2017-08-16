@@ -1,6 +1,8 @@
-name: nginx
+name: Nginx
 description: |
- form nginx
-如果有相关版权或者疑问请联系datachina@live.com
-version: v0.0.1
-category: nginx
+  nginx 如果有相关版权或者疑问请联系datachina@live.com
+version: 1.0.1-rancher2
+category: Clustering
+maintainer: "Raul Sanchez <datachina@live.com>"
+projectURL: https://github.com/liumanjun1209
+license:

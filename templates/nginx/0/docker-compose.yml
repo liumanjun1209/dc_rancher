@@ -1,11 +1,12 @@
 version: '2'
-nginx:
-  image: 'nginx'
-      volumes:
-        - 'nginx_logs:/var/log/nginx'
-        - 'nginx_www:/usr/share/nginx/html/www'
-        - 'nginx_config:/etc/nginx'
-     ports:
+services:
+  nginx:
+    image: 'nginx'
+    volumes:
+      - 'nginx_logs:/var/log/nginx'
+      - 'nginx_www:/usr/share/nginx/html/www'
+      - 'nginx_config:/etc/nginx'
+    ports:
       - ${public_port}:${public_port}
 volumes:
   nginx_logs:
