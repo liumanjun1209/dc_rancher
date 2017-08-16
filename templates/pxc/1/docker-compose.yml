@@ -25,9 +25,9 @@ pxc-data:
   environment:
     MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
   volumes:
-    - 'pxc_data_nfs: /var/lib/mysql'
-    - 'pxc_data_nfs: /etc/mysql/conf.d'
-    - 'pxc_data_nfs: /docker-entrypoint-initdb.d'
+    - 'data_nfs: /var/lib/mysql'
+    - 'data_nfs: /etc/mysql/conf.d'
+    - 'data_nfs: /docker-entrypoint-initdb.d'
   command: /bin/true
   labels:
     io.rancher.container.start_once: true    
@@ -41,5 +41,5 @@ pxc:
     - 'pxc-data'
 
 volumes:
-  pxc_data_nfs:
-    driver: "${volume_driver}"
+  data_nfs:
+    driver: ${volume_driver}
