@@ -1,7 +1,7 @@
 version: '2'
 services:
   spagobi:
-    image: 10.20.0.100:7777/spagobilabs/spagobi:all-in-one
+    image: spagobilabs/spagobi:all-in-one
     environment:
       WAIT_MYSQL: 'true'
     links:
@@ -9,7 +9,7 @@ services:
     ports:
     - 8080:8080/tcp
   spagobidb:
-    image: 10.20.0.100:7777/mysql:5.5
+    image: mysql:5.5
     environment:
       MYSQL_DATABASE: spagobidb
       MYSQL_PASSWORD: spagobipassword
