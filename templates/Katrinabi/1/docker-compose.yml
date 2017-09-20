@@ -5,7 +5,7 @@ spagobi:
     environment:
         - WAIT_MYSQL=true
 spagobi-lb:
-    image: rancher/lb-service-haproxy
+    image: rancher/lb-service-haproxy:v0.7.6
     ports:
     - 8080:8080/tcp
     labels:
