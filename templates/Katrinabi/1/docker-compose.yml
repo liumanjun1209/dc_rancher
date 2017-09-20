@@ -1,0 +1,20 @@
+spagobi:
+    image: spagobilabs/spagobi:fiware
+    links:
+        - spagobidb:db
+    environment:
+        - WAIT_MYSQL=true
+spagobi-lb:
+    image: rancher/lb-service-haproxy
+    ports:
+    - 8080:8080/tcp
+    labels:
+      io.rancher.container.agent.role: environmentAdmin
+      io.rancher.container.create_agent: 'true'
+spagobidb:
+    image: mysql:5.5
+    environment:
+        - MYSQL_USER=spagobiuser
+        - MYSQL_PASSWORD=spagobipassword
+        - MYSQL_DATABASE=spagobidb
+        - MYSQL_ROOT_PASSWORD=spagobirootpassword
