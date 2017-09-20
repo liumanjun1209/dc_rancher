@@ -1,20 +1,20 @@
-spagobi:
+Katrinabi:
     image: spagobilabs/spagobi:fiware
     links:
-        - spagobidb:db
+        - Katrinabidb:db
     environment:
         - WAIT_MYSQL=true
-spagobi-lb:
+Katrinabi-lb:
     image: rancher/lb-service-haproxy:v0.7.6
     ports:
     - 8080:8080/tcp
     labels:
       io.rancher.container.agent.role: environmentAdmin
       io.rancher.container.create_agent: 'true'
-spagobidb:
+Katrinabidb:
     image: mysql:5.5
     environment:
-        - MYSQL_USER=spagobiuser
-        - MYSQL_PASSWORD=spagobipassword
-        - MYSQL_DATABASE=spagobidb
-        - MYSQL_ROOT_PASSWORD=spagobirootpassword
+        - MYSQL_USER=Katrinabiuser
+        - MYSQL_PASSWORD=Katrinabipassword
+        - MYSQL_DATABASE=Katrinabidb
+        - MYSQL_ROOT_PASSWORD=Katrinabirootpassword
