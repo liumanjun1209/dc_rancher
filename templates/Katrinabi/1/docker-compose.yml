@@ -12,7 +12,7 @@ Katrinabi-lb:
       io.rancher.container.agent.role: environmentAdmin
       io.rancher.container.create_agent: 'true'
 Katrinabidb:
-    image: mysql:5.5
+    image: mysql:latest
     environment:
         - MYSQL_USER=Katrinabiuser
         - MYSQL_PASSWORD=Katrinabipassword
