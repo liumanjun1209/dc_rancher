@@ -1,4 +1,8 @@
 version: '2'
+catalog:
+  name: Katrinabi
+  version: 0.0.2
+  description: Katrinabi
 services:
   spagobi-lb:
     scale: 1
