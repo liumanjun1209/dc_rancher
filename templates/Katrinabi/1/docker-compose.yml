@@ -14,9 +14,9 @@ Katrinabi-lb:
       io.rancher.container.agent.role: environmentAdmin
       io.rancher.container.create_agent: 'true'
 Katrinabidb:
-    image: mysql:latest
+    image: mysql:5.5
     environment:
-        - MYSQL_USER=Katrinabiuser
-        - MYSQL_PASSWORD=Katrinabipassword
-        - MYSQL_DATABASE=Katrinabidb
-        - MYSQL_ROOT_PASSWORD=Katrinabirootpassword
+        - MYSQL_USER=spagobiuser
+        - MYSQL_PASSWORD=spagobipassword
+        - MYSQL_DATABASE=spagobidb
+        - MYSQL_ROOT_PASSWORD=spagobirootpassword
