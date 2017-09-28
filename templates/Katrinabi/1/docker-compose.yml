@@ -1,5 +1,5 @@
 Katrinabi:
-    image: spagobilabs/spagobi:fiware
+    image: spagobilabs/spagobi:all-in-one
     links:
         - Katrinabidb:db
     ports:

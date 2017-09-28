@@ -1,0 +1,5 @@
+name: Tensorflow
+description: |
+  Tensorflow 如果有相关版权或者疑问请联系datachina@live.com
+version: 2.7.1-rancher1
+category: Tensorflow
