@@ -1,0 +1,28 @@
+version: '2'
+services:
+  slave:
+    image: 10.20.0.100:7777/redis:3
+    environment:
+      affinity:service!: slave
+    links:
+    - master:redis-master
+    command:
+    - redis-server
+    - --slaveof
+    - redis-master
+    - '6379'
+    labels:
+      aliyun.scale: '2'
+  sentinel:
+    image: registry.aliyuncs.com/acs-sample/redis-sentinel:3
+    environment:
+      affinity:service!: sentinel
+    links:
+    - master:redis-master
+    - slave:slave
+    labels:
+      aliyun.scale: '3'
+  master:
+    image: 10.20.0.100:7777/redis:3
+    environment:
+      affinity:service!: slave
