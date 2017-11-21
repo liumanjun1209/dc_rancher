@@ -12,7 +12,7 @@ services:
       port_rules:
       - protocol: tcp
         service: Katrinabi
-        source_port: 80
+        source_port: 8080
         target_port: 8080
         path: 'SpagoBI'
     health_check:
