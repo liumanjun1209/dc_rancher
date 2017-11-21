@@ -7,7 +7,7 @@ Katrinabi:
     environment:
         - WAIT_MYSQL=true
 Katrinabi-lb:
-    image: rancher/lb-service-haproxy:v0.7.6
+    image: rancher/lb-service-haproxy:v0.7.9
     ports:
     - 8080:8080/tcp
     labels:
